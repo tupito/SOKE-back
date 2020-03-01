@@ -50,7 +50,7 @@ const testData = [
                 "enrollmentEnd": "2020-02-28T08:00:00"
             },
             {
-                "endDate": "2020-04-30T23:59:00",
+                "endDate": "2019-04-30T23:59:00",
                 "credits": 5,
                 "courseUnit": {
                     "localizedName": {
@@ -58,6 +58,20 @@ const testData = [
                     }
                 },
                 "id": "12153",
+                "startDate": "2019-03-02T00:00:00",
+                "code": "KA00BW79-3001",
+                "enrollmentStart": "2018-11-06T08:00:00",
+                "enrollmentEnd": "2019-03-06T08:00:00"
+            },
+            {
+                "endDate": "2020-04-30T23:59:00",
+                "credits": 5,
+                "courseUnit": {
+                    "localizedName": {
+                        "valueFi": "Maatalouspolitiikka 2"
+                    }
+                },
+                "id": "12154",
                 "startDate": "2020-03-02T00:00:00",
                 "code": "KA00BW79-3001",
                 "enrollmentStart": "2019-11-06T08:00:00",
