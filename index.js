@@ -14,7 +14,7 @@ app.get('/api/educationalFields', (req, res, next) => {
 })
 
 // koulutusalan opintojaksot
-app.get('/api/realization/:id', (req, res, next) => {
+app.get('/api/realizations/:id', (req, res, next) => {
   let findId = req.params.id
   let filteredData =  data.data.filter(obj => {
     return obj.educationalFields[0].id === findId
