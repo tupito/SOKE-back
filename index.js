@@ -8,8 +8,18 @@ app.use((req, res, next) => {
   next();
 });
 
-app.get('/soke', (req, res, next) => {
-  res.json(data)
+// koulutusalat
+app.get('/api/educationalFields', (req, res, next) => {
+  res.json(data.data)
+})
+
+// koulutusalan opintojaksot
+app.get('/api/realization/:id', (req, res, next) => {
+  let findId = req.params.id
+  let filteredData =  data.data.filter(obj => {
+    return obj.educationalFields[0].id === findId
+  });
+  res.json(filteredData)
 })
 
 const PORT = process.env.PORT || 3000;

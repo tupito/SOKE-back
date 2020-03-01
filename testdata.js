@@ -76,7 +76,22 @@ const testData = [
                 "code": "KA00BW79-3001",
                 "enrollmentStart": "2019-11-06T08:00:00",
                 "enrollmentEnd": "2020-03-06T08:00:00"
-            }
+            },
+            {
+                "endDate": "2020-11-01T23:59:00",
+                "credits": 5,
+                "courseUnit": {
+                    "localizedName": {
+                        "valueFi": "Kotieläinten tuotantoympäristö ja hyvinvointi"
+                    }
+                },
+                "id": "12654",
+                "startDate": "2020-03-02T00:00:00",
+                "code": "KA00BW69-3003",
+                "enrollmentStart": "2020-06-06T08:00:00",
+                "enrollmentEnd": "2020-07-01T08:00:00"
+            },
+
         ]
     },
     {
