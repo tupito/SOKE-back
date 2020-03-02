@@ -22,5 +22,27 @@ app.get('/api/realizations/:id', (req, res, next) => {
   res.json(filteredData)
 })
 
+app.get('/api/realization-item/:id', (req, res, next) => {
+  let findId = req.params.id
+
+  // etsi juuriobjekti haettavalle id:lle
+  let rootObj = data.data.find(obj => {
+    return obj.realizations.some(item => {
+      return item.id == findId
+    })
+  });
+
+  // haetaan toteutus juuriobjektista
+  let educationalFieldId = rootObj.educationalFields[0].id;
+  let foundItem = rootObj.realizations.find(obj => {
+    return obj.id == findId
+  })
+
+  // lisää toteutukseen koulutusalan id
+  foundItem.educationalFieldId = educationalFieldId
+
+  res.json(foundItem)
+})
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`listening on ${PORT}`))
